@@ -4,8 +4,254 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- || IMPORT FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Survey Form - freeCodeCamp Challenge</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <form id="survey-form" action="#" method="post">
+        <!-- || FORM HEADER -->
+        <header class="form-title">
+          <h1 id="title">freeCodeCamp Survey Form</h1>
+          <p id="description">
+            Thank you for take time to rate us ou freeCodeCamp platform.
+          </p>
+        </header>
+
+        <!-- || USER INFORMATION -->
+        <div class="flex-row">
+          <div class="form-group">
+            <label class="form-label" id="name-label" for="name">Name</label>
+            <input
+              class="input-field"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="email-label" for="email">Email</label>
+            <input
+              class="input-field"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" id="number-label" for="number">Age</label>
+            <input
+              class="input-field"
+              type="number"
+              name="number"
+              id="number"
+              min="0"
+              max="99"
+              placeholder="Enter your age"
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="dropdown">Gender</label>
+            <select class="select-field" name="gender" id="dropdown" required>
+              <option class="select-option" disabled selected value>
+                Select an option
+              </option>
+              <option value="male">Male</option>
+              <option value="male">Female</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- || FCC COURSES -->
+        <div class="form-title">
+          <h2>What did you learn on freeCodeCamp?</h2>
+        </div>
+        <div class="flex-row">
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="web-design"
+              id="web-design"
+              value="web-design"
+              checked
+            />
+            <label for="web-design">Responsive web design</label>
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="javascript"
+              id="javascript"
+              value="javascript"
+            />
+            <label for="javascript"
+              >Javascript algorithms & data structures</label
+            >
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="libraries"
+              id="libraries"
+              value="libraries"
+            />
+            <label for="libraries">Front end development libraries</label>
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="data-visualization"
+              id="data-visualization"
+              value="data-visualization"
+            />
+            <label for="data-visualization">Data visualization</label>
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="back-end"
+              id="back-end"
+              value="back-end"
+            />
+            <label for="back-end">Back end development & APIs</label>
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="quality-assurance"
+              id="quality-assurance"
+              value="quality-assurance"
+            />
+            <label for="quality-assurance">Quality Assurance</label>
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="scientific-computing"
+              id="scientific-computing"
+              value="scientific-computing"
+            />
+            <label for="scientific-computing"
+              >Scientific computing with Python</label
+            >
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="data-analysis"
+              id="data-analysis"
+              value="data-analysis"
+            />
+            <label for="data-analysis">Data analysis with Python</label>
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="information-security"
+              id="information-security"
+              value="information-security"
+            />
+            <label for="information-security">Information security</label>
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="machine-learning"
+              id="machine-learning"
+              value="machine-learning"
+            />
+            <label for="machine-learning">Machine learning with Python</label>
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="coding-interview"
+              id="coding-interview"
+              value="coding-interview"
+            />
+            <label for="coding-interview">Coding interview prep</label>
+          </div>
+          <div class="form-group flex">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="relational-database"
+              id="relational-database"
+              value="relational-database"
+            />
+            <label for="relational-database">Relational database</label>
+          </div>
+        </div>
+
+        <!-- || RECOMMENDATIONS ||-->
+        <div class="form-title">
+          <h2>Would you recommend freeCodeCamp?</h2>
+        </div>
+        <div class="flex-row radio">
+          <div class="form-group flex-radio">
+            <input
+              class="input-radio"
+              type="radio"
+              name="radio"
+              id="yes"
+              value="yes"
+              checked
+            />
+            <label for="yes">Yes</label>
+          </div>
+          <div class="form-group flex-radio">
+            <input
+              class="input-radio"
+              type="radio"
+              name="radio"
+              id="no"
+              value="no"
+            />
+            <label for="no">No</label>
+          </div>
+        </div>
+
+        <!-- || COMMENTS -->
+        <div class="form-title">
+          <h2>Any comments or suggestions?</h2>
+        </div>
+        <div class="form-group textarea">
+          <textarea
+            name="comments"
+            class="input-textarea"
+            placeholder="Enter your comments here..."
+          ></textarea>
+        </div>
+
+        <!-- || SUBMIT -->
+        <div class="form-group">
+          <button class="submit-button" id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  </body>
 </html>
