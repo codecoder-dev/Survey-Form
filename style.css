@@ -1,0 +1,230 @@
+/* || IMPORT GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* || VARIABLES */
+:root {
+  /* Colors */
+  --primary-color: #ff5a5f;
+  --secondary-color: #afbfc0;
+  --text-primary-color: #373f47;
+  --text-secondary-color: var(--secondary-color);
+  --light-color: #fafafa;
+
+  /* Border-radius */
+  --border-radius: 0.2rem;
+}
+
+/* || RESET */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* || MAIN STYLE */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary-color);
+  margin: 0;
+}
+
+h1,
+h2 {
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin: 0;
+}
+
+/* || UTILITIES */
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 754px) {
+  .container {
+    max-width: 754px;
+  }
+
+  .flex-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+  }
+
+  .form-group {
+    flex: 0 0 auto;
+    width: calc(50% - 1rem);
+  }
+}
+
+/* || FORM MAIN STYLE */
+.form-group.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* Form Header */
+.form-title {
+  margin: 2rem 0;
+}
+
+/* || USER INFORMATION */
+.input-field,
+.select-field {
+  appearance: none;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  background-color: var(--light-color);
+  font-size: 1rem;
+}
+
+.input-field:focus,
+.select-field:focus {
+  border: 1px solid var(--primary-color);
+  outline: 1px solid var(--primary-color); /* Change default */
+}
+
+.input-field::placeholder,
+.select-field::placeholder {
+  color: var(--text-secondary-color);
+}
+
+/* || FCC COURSES */
+/* Custom Checkbox Style */
+/* Reset Checkbox Style */
+.input-checkbox {
+  appearance: none; /* Reset checkbox appearance */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  background-color: var(--light-color);
+}
+
+/* Add Check Icon */
+.input-checkbox::after {
+  display: none;
+  font-family: 'Font Awesome 6 Free'; /* Add Font Awesome Version */
+  font-size: 0.6rem;
+  font-weight: 700;
+  content: '\f00c'; /* Copy Unicode From Font Awesome Website & Add Backslash '\' before */
+}
+
+/* Add Custom Checkbox Style When Checked */
+.input-checkbox:checked {
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+/* Display Check Icon When Checked */
+.input-checkbox:checked::after {
+  display: block;
+  color: white;
+}
+
+/* || RECOMMENDATIONS */
+.flex-row.radio {
+  flex-direction: row;
+}
+
+.flex-radio {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+/* Custom Radio Style */
+/* Reset Radio Style */
+.input-radio {
+  appearance: none; /* Reset radio appearance */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-right: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  background-color: var(--light-color);
+}
+
+/* Add Dot Icon */
+.input-radio::after {
+  display: none;
+  font-family: 'Font Awesome 6 Free'; /* Add Font Awesome Version */
+  font-size: 1rem;
+  font-weight: 400;
+  content: '\f192'; /* Copy Unicode From Font Awesome Website & Add Backslash '\' before */
+}
+
+/* Add Custom Dot Style When Checked */
+.input-radio:checked::after {
+  display: block;
+  color: var(--primary-color);
+}
+
+/* || COMMENTS */
+.input-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  background-color: var(--light-color);
+  font-size: 1rem;
+}
+
+.input-textarea:focus {
+  border: 1px solid var(--primary-color);
+  outline: 1px solid var(--primary-color); /* Change default */
+}
+
+.input-textarea::placeholder {
+  color: var(--text-secondary-color);
+}
+
+/* Media Queries */
+@media screen and (min-width: 754px) {
+  .form-group.textarea {
+    width: 100%;
+  }
+}
+
+/* || SUBMIT */
+.submit-button {
+  cursor: pointer;
+  margin-bottom: 2rem;
+  padding: 0.625rem 1rem;
+  border: 0;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  color: white;
+  background-color: var(--primary-color);
+}
